@@ -1,17 +1,18 @@
-from django.shortcuts import render, get_object_or_404
+from django.views import generic
 from .models import Album
 
 # Create your views here.
 
-def index(request):
-    albums = Album.objects.all()
-    context = {'albums': albums}
-    return render(request, 'music/index.html', context)
+class IndexView(generic.ListView):
 
-def detail(request, album_id):
+    template_name = 'music/index.html'
+    context_object_name = 'albums'
 
-    album = get_object_or_404(Album, pk=album_id)
-
-    return render(request, 'music/detail.html', {'album':album})
+    def get_queryset(self):
+        return Album.objects.all()
 
 
+class DetailView(generic.DetailView):
+
+    model = Album
+    template_name = 'music/detail.html'
