@@ -13,4 +13,4 @@ Muisc Cloud is project, that allow user to add/update/delete albums and its song
   ```
 
 ## Web Interface
-![Alt homepage](https://drive.google.com/file/d/1rOBBSTA5DwOcvsHbxqUwnmhHvT6BJy43/view?usp=sharing)
+![Alt homepage](/screenshots/MusicCloud_1.png)
