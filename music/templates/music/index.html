@@ -8,7 +8,7 @@
             {% for album in albums %}
                 <div class="col-sm-3" align="center">
                     <div class="album">
-                        <a href="{% url 'music:detail' album.id %}"><img src="{{ album.album_logo }}" class="album-logo"/></a>
+                        <a href="{% url 'music:detail' album.id %}"><img src="{{ album.album_logo.url }}" class="album-logo"/></a>
                         <h2>{{ album.album_title }}</h2>
                         <h4>{{ album.artist }}</h4>
                         <button type="button" class="btn btn-primary" onclick="location.href = '{% url 'music:detail' album.id %}' ">Details</button>
