@@ -1,0 +1,19 @@
+body{
+    background: lightgrey;
+}
+
+.navbar-brand{
+
+    font-family: 'Monoton', cursive ;
+}
+
+.album-logo{
+    width: 100%;
+
+}
+
+.album{
+    margin: 5px;
+    background: white;
+    padding: 4px;
+}

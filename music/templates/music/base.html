@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} Music Cloud {% endblock%}</title>
+
+     <!--Static files-->
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <!--<link rel="stylesheet" href="{% static 'music/styles/bootstrap.min.css' %}"/>-->
+    <link rel="stylesheet" href="{% static 'music/style.css' %}"/>
+    <script src="{% static 'music/scripts/bootstrap.min.js' %}"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container-fluid">
+
+            <!--Logo-->
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topbar" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'music:index' %}">Music Cloud</a>
+
+            </div>
+            <!--collapse navbar-->
+            <div class="collapse navbar-collapse" id="topbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'music:index' %}"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span> Albums</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'music:index' %}"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Songs</a>
+                  </li>
+                </ul>
+
+                <div>
+                    <form class="form-inline my-2 my-lg-0 navbar-right" method="get" action="#">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" name="q">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+              </div>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'music:index' %}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Album</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'music:index' %}"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>
